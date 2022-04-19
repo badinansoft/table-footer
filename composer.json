@@ -9,6 +9,16 @@
         "Shahab Zebari"
     ],
     "license": "MIT",
+    "authors": [
+        {
+          "name": "BadinanSoft",
+          "email": "info@badinansoft.com"
+        },
+        {
+          "name": "Shahab Zebari",
+          "email": "me@shahabzebari.net"
+        }
+    ],
     "require": {
         "php": ">=7.1.0"
     },
