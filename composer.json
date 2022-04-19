@@ -1,0 +1,32 @@
+{
+    "name": "badinansoft/table-footer",
+    "description": "A Laravel Nova tool for adding a footer to a table, that will calculate the total of the columns",
+    "keywords": [
+        "laravel",
+        "nova",
+        "table",
+        "BadinanSoft",
+        "Shahab Zebari"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Badinansoft\\TableFooter\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Badinansoft\\TableFooter\\ToolServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
