@@ -9,6 +9,8 @@ This [Laravel Nova](https://nova.laravel.com) package is used for calculating th
 - `php: >=7.4`
 - `laravel/nova: ^3.0`
 
+### Note: May this packge don't work with nova 4
+
 ## Features
 - Add a footer to any index table you want.
 - Any calculatable columns you want you can get total 
