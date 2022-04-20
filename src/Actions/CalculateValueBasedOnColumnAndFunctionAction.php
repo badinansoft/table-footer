@@ -23,7 +23,7 @@ class CalculateValueBasedOnColumnAndFunctionAction
      */
     public function __invoke($query,$column,$function):string
     {
-        return number_format($query->aggregate($function,[$column])) ?? 0;
+        return number_format($query->{$function}($column) )?? 0;
     }
 
 }
