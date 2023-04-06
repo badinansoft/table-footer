@@ -23,7 +23,27 @@ class CalculateValueBasedOnColumnAndFunctionAction
      */
     public function __invoke($query,$column,$function):string
     {
-        return number_format($query->{$function}($column) )?? 0;
+        $result = $this->$function($query,$function,$column);
+        return $result;
     }
 
+    private function sum($query,$function,$column) {
+        return array_sum(array_values(array_column($query->get()->toArray(),$column)));
+    }
+
+    private function min($query,$function,$column) {
+        return min(array_column($query->get()->toArray(),$column));
+    }
+
+    private function max($query,$function,$column) {
+        return max(array_column($query->get()->toArray(),$column));
+    }
+
+    private function avg($query,$function,$column) {
+        return $this->sum($query,$function,$column) / $query->get()->count();
+    }
+
+    private function count($query,$function,$column) {
+        return $query->get()->count();
+    }
 }
